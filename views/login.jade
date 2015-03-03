@@ -1,0 +1,23 @@
+extends layout
+block content
+  title= title
+  link(rel="stylesheet", href="/stylesheets/css/login.css")
+  link(rel="stylesheet", href="/stylesheets/animation/animation.css")
+  body
+    .login.animated
+      .title OA
+      .content
+        form(method="post", action="/login/login").form.enter
+          input(type="input" name="account" placeholder="place enter account")
+          input(type="password" name="password" placeholder="place enter password")
+          button(type="submit")#submit Enter
+          .note this is ....
+        form.form.register
+          input(type="input" placeholder="place enter account")
+          input(type="password" placeholder="place enter password")
+          button register
+          .note this is ....
+      .footer register
+  script(src="/javascripts/login.js")
+
+
